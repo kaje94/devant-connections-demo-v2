@@ -1,0 +1,8 @@
+[package]
+org = "kajendran"
+name = "get_users"
+version = "0.1.0"
+title = "get-users"
+
+[build-options]
+sticky = true

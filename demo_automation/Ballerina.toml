@@ -1,0 +1,8 @@
+[package]
+org = "kajendran"
+name = "demo_automation"
+version = "0.1.0"
+title = "demo-automation"
+
+[build-options]
+sticky = true
