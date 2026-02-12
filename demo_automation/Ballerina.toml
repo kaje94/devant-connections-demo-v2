@@ -6,3 +6,13 @@ title = "demo-automation"
 
 [build-options]
 sticky = true
+
+[[tool.openapi]]
+id = "getusers"
+targetModule = "getusers"
+filePath = "./.choreo/getusers-spec.yaml"
+
+[[tool.openapi]]
+id = "enrichusers"
+targetModule = "enrichusers"
+filePath = "./enrichusers_openapi.yaml"
