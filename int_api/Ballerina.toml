@@ -1,0 +1,8 @@
+[package]
+org = "kajendran"
+name = "int_api"
+version = "0.1.0"
+title = "int-api"
+
+[build-options]
+sticky = true
