@@ -2,7 +2,7 @@ import ballerina/http;
 import ballerina/log;
 import ballerina/os;
 
-configurable string choreoapikey = os:getEnv("CHOREO_GET_USERS_APIKEY");
+configurable string choreoapikey = os:getEnv("CHOREO_GET_USERS_CHOREOAPIKEY");
 configurable string serviceurl = os:getEnv("CHOREO_GET_USERS_SERVICEURL");
 
 configurable string? devantProxyHost = ();
@@ -22,27 +22,27 @@ function init() {
     log:printInfo("Choreo API Key configured: " + (choreoapikey.length() > 0 ? "Yes (length: " + choreoapikey.length().toString() + ")" : "No/Empty"));
     log:printInfo("Service URL: " + (serviceurl.length() > 0 ? serviceurl : "Not configured"));
     
-    // Detailed proxy configuration logging
-    log:printInfo("--- Proxy Configuration ---");
-    if (devantProxyHost is string) {
-        log:printInfo("Devant Proxy Host: PRESENT - " + devantProxyHost.toString());
-    } else {
-        log:printInfo("Devant Proxy Host: NOT PRESENT");
-    }
+    // // Detailed proxy configuration logging
+    // log:printInfo("--- Proxy Configuration ---");
+    // if (devantProxyHost is string) {
+    //     log:printInfo("Devant Proxy Host: PRESENT - " + devantProxyHost.toString());
+    // } else {
+    //     log:printInfo("Devant Proxy Host: NOT PRESENT");
+    // }
     
-    if (devantProxyPort is int) {
-        log:printInfo("Devant Proxy Port: PRESENT - " + devantProxyPort.toString());
-    } else {
-        log:printInfo("Devant Proxy Port: NOT PRESENT");
-    }
+    // if (devantProxyPort is int) {
+    //     log:printInfo("Devant Proxy Port: PRESENT - " + devantProxyPort.toString());
+    // } else {
+    //     log:printInfo("Devant Proxy Port: NOT PRESENT");
+    // }
     
-    if (devantProxyConfig is http:ProxyConfig) {
-        http:ProxyConfig proxyConfig = <http:ProxyConfig>devantProxyConfig;
-        log:printInfo("Devant Proxy Config: CONFIGURED - {host: \"" + proxyConfig.host + "\", port: " + proxyConfig.port.toString() + "}");
-    } else {
-        log:printInfo("Devant Proxy Config: NOT CONFIGURED (both host and port must be set)");
-    }
-    log:printInfo("---------------------------");
+    // if (devantProxyConfig is http:ProxyConfig) {
+    //     http:ProxyConfig proxyConfig = <http:ProxyConfig>devantProxyConfig;
+    //     log:printInfo("Devant Proxy Config: CONFIGURED - {host: \"" + proxyConfig.host + "\", port: " + proxyConfig.port.toString() + "}");
+    // } else {
+    //     log:printInfo("Devant Proxy Config: NOT CONFIGURED (both host and port must be set)");
+    // }
+    // log:printInfo("---------------------------");
     
     log:printInfo("Enrich User Service URL: " + (enrichUserSvcUrl.length() > 0 ? enrichUserSvcUrl : "Not configured"));
     log:printInfo("SMTP Host: " + (smtpHost.length() > 0 ? smtpHost : "Not configured"));
