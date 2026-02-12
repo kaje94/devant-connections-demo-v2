@@ -1,8 +1,8 @@
 [package]
 org = "kajendran"
-name = "get_users"
+name = "enrich_users"
 version = "0.1.0"
-title = "get-users"
+title = "enrich-users"
 
 [build-options]
 sticky = true
