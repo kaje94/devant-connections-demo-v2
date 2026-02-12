@@ -58,6 +58,20 @@ dependencies = [
 
 [[package]]
 org = "ballerina"
+name = "email"
+version = "2.13.0"
+dependencies = [
+	{org = "ballerina", name = "jballerina.java"},
+	{org = "ballerina", name = "log"},
+	{org = "ballerina", name = "mime"},
+	{org = "ballerina", name = "task"}
+]
+modules = [
+	{org = "ballerina", packageName = "email", moduleName = "email"}
+]
+
+[[package]]
+org = "ballerina"
 name = "file"
 version = "1.12.0"
 dependencies = [
@@ -206,12 +220,15 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "log"
-version = "2.13.0"
+version = "2.14.0"
 dependencies = [
 	{org = "ballerina", name = "io"},
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "lang.value"},
 	{org = "ballerina", name = "observe"}
+]
+modules = [
+	{org = "ballerina", packageName = "log", moduleName = "log"}
 ]
 
 [[package]]
@@ -254,6 +271,9 @@ dependencies = [
 	{org = "ballerina", name = "io"},
 	{org = "ballerina", name = "jballerina.java"}
 ]
+modules = [
+	{org = "ballerina", packageName = "os", moduleName = "os"}
+]
 
 [[package]]
 org = "ballerina"
@@ -280,6 +300,9 @@ version = "2.6.1"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"}
 ]
+modules = [
+	{org = "ballerina", packageName = "url", moduleName = "url"}
+]
 
 [[package]]
 org = "ballerina"
@@ -294,12 +317,24 @@ dependencies = [
 
 [[package]]
 org = "kajendran"
-name = "get_users"
+name = "int_api"
 version = "0.1.0"
 dependencies = [
-	{org = "ballerina", name = "http"}
+	{org = "ballerina", name = "email"},
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "log"},
+	{org = "ballerina", name = "os"},
+	{org = "ballerina", name = "url"}
 ]
 modules = [
-	{org = "kajendran", packageName = "get_users", moduleName = "get_users"}
+	{org = "kajendran", packageName = "int_api", moduleName = "int_api"},
+	{org = "kajendran", packageName = "int_api", moduleName = "int_api.enrichusersv2"},
+	{org = "kajendran", packageName = "int_api", moduleName = "int_api.getusers1"}
 ]
+
+[[tool]]
+id = "openapi"
+org = "ballerina"
+name = "tool.openapi"
+version = "2.4.0"
 

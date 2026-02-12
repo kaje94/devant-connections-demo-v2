@@ -1,0 +1,9 @@
+schemaVersion: '1.2'
+dependencies:
+  connectionReferences:
+    - name: get_users1
+      resourceRef: service:/devant-connections-demo/getusers/v1/803f0/PROJECT
+    - name: enrichUsersv2
+      resourceRef: thirdparty:enrichUsersv2/v1
+    - name: emailConnection1
+      resourceRef: thirdparty:emailConnection11/v1

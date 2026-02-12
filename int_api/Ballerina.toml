@@ -6,3 +6,13 @@ title = "int-api"
 
 [build-options]
 sticky = true
+
+[[tool.openapi]]
+id = "getusers1"
+targetModule = "getusers1"
+filePath = "./.choreo/getusers1-spec.yaml"
+
+[[tool.openapi]]
+id = "enrichusersv2"
+targetModule = "enrichusersv2"
+filePath = "./.choreo/enrichusersv2-spec.yaml"
