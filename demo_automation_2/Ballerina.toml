@@ -1,0 +1,18 @@
+[package]
+org = "kajendran"
+name = "demo_automation_2"
+version = "0.1.0"
+title = "demo-automation-2"
+
+[build-options]
+sticky = true
+
+[[tool.openapi]]
+id = "getusers"
+targetModule = "getusers"
+filePath = "./.choreo/getusers-spec.yaml"
+
+[[tool.openapi]]
+id = "enrichuserdata"
+targetModule = "enrichuserdata"
+filePath = "./.choreo/enrichuserdata-spec.yaml"
