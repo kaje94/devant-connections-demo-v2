@@ -1,0 +1,18 @@
+[package]
+org = "kajendran"
+name = "demo_integration_3"
+version = "0.1.0"
+title = "demo-integration-3"
+
+[build-options]
+sticky = true
+
+[[tool.openapi]]
+id = "getusers"
+targetModule = "getusers"
+filePath = "./.choreo/getusers-spec.yaml"
+
+[[tool.openapi]]
+id = "userenrichersvc"
+targetModule = "userenrichersvc"
+filePath = "./.choreo/userenrichersvc-spec.yaml"
