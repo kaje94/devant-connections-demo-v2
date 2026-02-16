@@ -1,0 +1,5 @@
+schemaVersion: '1.2'
+dependencies:
+  connectionReferences:
+    - name: get_users
+      resourceRef: service:/devant-connections-demo/getusers/v1/803f0/PROJECT

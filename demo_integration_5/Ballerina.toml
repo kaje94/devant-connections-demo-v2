@@ -1,0 +1,13 @@
+[package]
+org = "kajendran"
+name = "demo_integration_5"
+version = "0.1.0"
+title = "demo integration 5"
+
+[build-options]
+sticky = true
+
+[[tool.openapi]]
+id = "getusers"
+targetModule = "getusers"
+filePath = "./.choreo/getusers-spec.yaml"
