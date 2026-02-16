@@ -3,7 +3,7 @@ info:
   title: /
   version: 0.1.0
 servers:
-  - url: http://{server}:{port}
+  - url: http://{server}:{port}/
     variables:
       server:
         default: localhost
@@ -31,11 +31,3 @@ components:
           type: array
           items:
             type: string
-  securitySchemes:
-    DevantApiKeyAuth:
-      type: apiKey
-      in: header
-      name: Choreo-API-Key
-      x-ballerina-name: choreoAPIKey
-security:
-  - DevantApiKeyAuth: []
